@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Simple & clean</p>
+          <h1>To-Do List</h1>
+          <p class="sub">Stay focused with a lightweight, fast list.</p>
+        </div>
+        <div class="badge">FastAPI</div>
+      </header>
+
+      <section class="card">
+        <form id="task-form" class="task-form">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="Add a new task"
+            autocomplete="off"
+            required
+          />
+          <button type="submit">Add</button>
+        </form>
+        <div class="bulk-actions">
+          <label class="select-all">
+            <input id="select-all" type="checkbox" />
+            <span>Select all</span>
+          </label>
+          <div class="bulk-right">
+            <span id="selected-count" class="bulk-count">0 selected</span>
+            <button id="delete-selected" class="action-btn danger" type="button" disabled>
+              Delete selected
+            </button>
+          </div>
+        </div>
+        <div id="empty-state" class="empty">No tasks yet. Add your first one.</div>
+        <ul id="task-list" class="task-list"></ul>
+      </section>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
